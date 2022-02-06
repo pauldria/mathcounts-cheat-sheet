@@ -12,15 +12,8 @@ jobs:
           root_file: cheat-sheet.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
-      - name: bibtex cheat-sheet
-        uses: dante-ev/latex-action@latest
+      - name: Upload artifact
+        uses: actions/upload-artifact@master
         with:
-          root_file: cheat-sheet.aux
-          compiler: bibtex
-          args: 
-      - name: pdflatex cheat-sheet
-        uses: dante-ev/latex-action@latest
-        with:
-          root_file: cheat-sheet.tex
-          compiler: pdflatex
-          args: -interaction=nonstopmode -shell-escape
+          name: cheat-sheet.pdf
+          path: cheat-sheet.pdf
