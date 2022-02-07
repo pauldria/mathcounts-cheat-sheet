@@ -18,9 +18,9 @@ jobs:
           name: cheat-sheet.pdf
           path: cheat-sheet.pdf
       - name: Make directory
-        run: mkdir ./public
+        run: mkdir public
       - name: Move file
-        run: mv cheat-sheet.pdf ./public/cheat-sheet.pdf
+        run: mv cheat-sheet.pdf public/cheat-sheet.pdf
   deploy_ghpages:
     needs: build_latex
     runs-on: ubuntu-18.04
