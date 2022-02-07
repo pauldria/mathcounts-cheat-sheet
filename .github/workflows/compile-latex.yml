@@ -15,8 +15,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
-          name: cheat-sheet.pdf
-          path: public/cheat-sheet.pdf
+          name: public/cheat-sheet.pdf
+          path: cheat-sheet.pdf
   deploy_ghpages:
     needs: build_latex
     runs-on: ubuntu-18.04
