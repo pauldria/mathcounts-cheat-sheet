@@ -18,6 +18,7 @@ jobs:
           name: cheat-sheet.pdf
           path: public/cheat-sheet.pdf
   deploy_ghpages:
+    needs: build_latex
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
