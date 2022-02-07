@@ -21,12 +21,8 @@ jobs:
         run: mkdir public
       - name: Move file
         run: mv cheat-sheet.pdf public/cheat-sheet.pdf
-  deploy_ghpages:
-    needs: build_latex
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
-      - uses: maxheld83/ghpages@v0.3.0
+      - name: Deploy to GH Pages
+        uses: maxheld83/ghpages@v0.3.0
         env:
           BUILD_DIR: public/
           GH_PAT: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
