@@ -17,7 +17,9 @@ jobs:
         with:
           name: cheat-sheet.pdf
           path: cheat-sheet.pdf
-      - name: copy file
+      - name: Make directory
+        run: mkdir ./public
+      - name: Move file
         run: mv cheat-sheet.pdf ./public/cheat-sheet.pdf
   deploy_ghpages:
     needs: build_latex
