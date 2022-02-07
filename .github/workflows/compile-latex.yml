@@ -12,13 +12,12 @@ jobs:
           root_file: cheat-sheet.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
-      - run: mkdir -p public
-      - run: echo hello > public/cheat-sheet.pdf
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
           name: cheat-sheet.pdf
-          path: public/cheat-sheet.pdf
+          path: cheat-sheet.pdf
+      - run: mv cheat-sheet.pdf ./public/cheat-sheet.pdf
   deploy_ghpages:
     needs: build_latex
     runs-on: ubuntu-18.04
