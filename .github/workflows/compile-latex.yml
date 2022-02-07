@@ -16,4 +16,12 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: cheat-sheet.pdf
-          path: cheat-sheet.pdf
+          path: public/cheat-sheet.pdf
+  deploy_ghpages:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: maxheld83/ghpages@v0.3.0
+        env:
+          BUILD_DIR: public/
+          GH_PAT: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
