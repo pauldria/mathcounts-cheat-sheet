@@ -22,7 +22,12 @@ jobs:
       - name: Move file
         run: mv cheat-sheet.pdf public/cheat-sheet.pdf
       - name: Deploy to GH Pages
-        uses: maxheld83/ghpages@v0.3.0
-        env:
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: public
+          destination_dir: assets
           BUILD_DIR: public/
           GH_PAT: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
