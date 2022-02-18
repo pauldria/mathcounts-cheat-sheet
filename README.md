@@ -1,6 +1,7 @@
 # The Open Mathcounts "Cheat Sheet"
 
 ![Build Latex Document](https://github.com/pauldria/mathcounts-cheat-sheet/actions/workflows/compile-latex.yml/badge.svg)
+![Website](https://github.com/pauldria/mathcounts-cheat-sheet/actions/workflows/pages/pages-build-deployment/badge.svg)
 
 Don't be a cheater, but utilize this open and editable [Mathcounts](https://www.mathcounts.org/) cheat sheet to summarize all the facts and tips your students should know for success in the competitions. 
 
