@@ -29,5 +29,3 @@ jobs:
           publish_branch: gh-pages
           publish_dir: public
           destination_dir: assets
-          BUILD_DIR: public/
-          GH_PAT: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
